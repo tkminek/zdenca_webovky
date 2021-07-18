@@ -1,0 +1,27 @@
+{% extends "templates/template.html" %}
+
+{% block title %}
+Order page
+{% endblock %}
+
+{% block pagename %}
+Objednávka
+{% endblock %}
+
+{% block main %}
+<form action="/order" method="POST">
+    <div>
+        <label>Product</label>
+        <input type="number" name="product_number",placeholder="Zadej číslo produktu">
+    </div>
+    <div>
+        <label>Quantity</label>
+        <input type="number" name="quantity",placeholder="Jaké množství si chceš objednat?">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" name="email",placeholder="Zadej svuj email">
+    </div>
+    <button type="submit">Odešli objednávku</button>
+</form>
+{% endblock %}
